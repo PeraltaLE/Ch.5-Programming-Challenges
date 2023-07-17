@@ -1,0 +1,27 @@
+// PeraltaLE
+//
+// Characters for the ASCII Codes
+//
+// Write a program that uses a loop to display the characters for the ASCII codes 0 through 127.
+//
+// Display 16 characters on each line.
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+
+	cout << "\t\t\t\tASCII CHARACTER CODES (0 - 127) " << endl;
+	cout << "-------------------------------------------------------------------------------------------" << endl;
+	
+	for (int x = 0; x <= 127; x++) {
+		cout << x << "." << char(x) << " ";
+
+	// Using the Modulus Operator I can cut the segments so that it only displays 16.
+		if (x % 16 == 0)
+			cout << endl;
+	}
+	cout << endl;
+
+	return 0;
+}
