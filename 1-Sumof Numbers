@@ -1,0 +1,32 @@
+// PeraltaLE
+//
+// Sum of Numbers
+//
+// Write a program that asks the user for a positive integer value.
+//
+// The program should use a loop to get the sum of all the integers from 1 up to the number entered
+// For example, if the user enters 50, the loop will find the sum of 1, 2, 3, 4,...50.
+//
+// Input Validation: Do not accept a negative starting number.
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int number, count = 0;
+
+	cout << "Please enter a positive number: ";
+	cin >> number;
+
+	while (number < 0) {
+		cout << "\nERROR! Please enter a positive number: ";
+		cin >> number;
+	}
+
+	for (int x = 0; x <= number; x++) {
+		count += x;
+	}
+	cout << "\nThe sum of all the numbers is " << count << endl;
+
+	return 0;
+}
