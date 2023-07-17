@@ -1,0 +1,29 @@
+// PeraltaLE
+//
+// Calories Burned
+//
+// Running on a particular treadmill you burn 3.6 calories per minute.
+//
+// Write a program that uses a loop to display the number of calories burned after:
+// * 5, 10, 15, 20, 25, and 30 minutes.
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	const double CALORIES_PER_MINUTE = 3.6;
+
+	double calories = 0;
+
+	cout << "\t\tCALORIES BURNED" << endl;
+	cout << "---------------------------------------------" << endl;
+
+	for (int i = 1; i <= 30; i++) {
+		calories = CALORIES_PER_MINUTE * i;
+		if (i % 5 == 0)
+			cout << "After " << i << " minutes you have burned " << calories << " Calories." << endl;
+	}
+
+
+	return 0;
+}
