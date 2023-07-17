@@ -1,0 +1,27 @@
+// PeraltaLE
+//
+// Ocean Levels
+//
+// Assuming the ocean's level is currently rising at about 1.5 milimeters per year.
+//
+// Write a program that displays a table showing the number of milimeters that the ocean
+// will have risen each year for the next 25 years.
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	const float OCEAN_RISING = 1.5;
+
+	int year = 2023;
+
+	cout << "Year| Level the ocean has risen (in mL)" << endl;
+	cout << "---------------------------------------" << endl;
+
+	for (int i = 1; i <= 25; i++) {
+		cout << year << ": " << OCEAN_RISING * i << endl;
+		year++;
+	}
+
+	return 0;
+}
